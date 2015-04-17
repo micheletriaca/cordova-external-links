@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.telnext.externalLinks" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>external links</name>
+    <description>A plugin for opening phone links and map links correctly from an android cordova application</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,plugins,sms,phone</keywords>    
+
+    <js-module name="externalLinks" src="www/external-links.js">
+        <clobbers target="plugin.externalLinks" />
+    </js-module>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="ExternalLinks">
+                <param name="android-package" value="com.telnext.ExternalLinks" />
+            </feature>
+        </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            
+        </config-file>        
+        
+        <source-file src="src/android/ExternalLinks.java" target-dir="src/com/telnext/externalLinks" />
+    </platform>
+
+</plugin>
