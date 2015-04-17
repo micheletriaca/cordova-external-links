@@ -1,6 +1,6 @@
 var contactExport = {};
 
-contactExport.openIntent = function(phoneNumber, successCallback, errorCallback) {
+contactExport.openPhone = function(phoneNumber, successCallback, errorCallback) {
     if (typeof phoneNumber !== 'string' || !(phoneNumber)) {
         if (errorCallback) {
             errorCallback({
