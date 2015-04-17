@@ -1,4 +1,4 @@
-package com.telnext.cordovaPlugin;
+package com.telnext;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
